@@ -99,7 +99,7 @@ async def rassilka2(message: types.Message, state: FSMContext):
 
 @dp.message_handler(content_types=['text'])
 async def text(message: types.Message):
-    if message.text.startswith(('https://www.tiktok.com','http://www.tiktok.com', 'https://vm.tiktok.com', 'http://vm.tiktok.com')):
+    if message.text.startswith(('https://www.tiktok.com','http://www.tiktok.com', 'https://vm.tiktok.com', 'http://vm.tiktok.com', 'https://vt.tiktok.com', 'http://vt.tiktok.com')):
         await bot.send_message(chat_id=message.chat.id, text='Ожидайте...')
         video_url = message.text
         await bot.send_message(chat_id=message.chat.id, text='Получаю информацию о видео...')
